@@ -16,8 +16,8 @@ router.get('/', (req, res, next) => {
         .select('id', 'title', 'description', 'price', 'item_image')
         .orderBy('id')
     .then((rows) => {
-            const msgs = (rows);
-            res.send(msgs);
+            const quizQuestions = (rows);
+            res.send(quizQuestions);
         })
         .catch((err) => {
             next(err);
