@@ -1,0 +1,28 @@
+{
+  "name": "capstone_v1",
+  "version": "1.0.0",
+  "description": "Quarter 4 Project at Galvanize Gschool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keeganridgley107/capstone_v1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keeganridgley107/capstone_v1/issues"
+  },
+  "homepage": "https://github.com/keeganridgley107/capstone_v1#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "pg": "^6.1.0",
+    "dotenv": "^4.0.0"
+  }
+}
