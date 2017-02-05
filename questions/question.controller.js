@@ -12,12 +12,8 @@
 
     function questionCtrl($http) {
         const vm = this;
-
-
         vm.$onInit = function() {
-
           console.log("onInit is running");
-
         }; //end of oninit function
 
      }

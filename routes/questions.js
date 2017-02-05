@@ -9,12 +9,10 @@ const knex = require('../knex');
 
 
 
-
-
 router.get('/', (req, res, next) => {
     knex('questions')
-        .select('id', 'title', 'description', 'price', 'item_image')
-        .orderBy('id')
+
+
     .then((rows) => {
             const quizQuestions = (rows);
             res.send(quizQuestions);
