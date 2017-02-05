@@ -1,9 +1,27 @@
-<div class="">
-  hello, angular!
-</div>
+
 <!-- this is where the login (SECRET_TOKEN) input will be -->
 
+<div class="login">
+  <input type="text" name="login_input" placeholder="Login Here" value="">
+</div>
+
+
 <!-- this is where questions will be generated  -->
+<div ng-if="true" class="">
+<div class="container">
+  <div ng-reapeat="question in $ctrl.questions" class="col-md-12">
+    <div class="">
+      <h3>{{ question.title }}</h3>
+      <p>{{ question.text }}</p>
+      <input type="text" name="question_input" placeholder="Input Solution Here" value="">
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end of questions container -->
+
+
 
 
 <!-- this is where the finalQuestionInput will be in ng-if, which is tied to user outcome from final question, if all questions pass then the input bar will show up  -->
@@ -15,7 +33,6 @@
 <!-- ALT-ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
 
 <!-- tech needed:
-
  HOSTED SITE
  RPI SERVER (running forever)
  QR code generator
@@ -23,5 +40,4 @@
  custom form validation
  GPS / location service
  CHAT room / service
-
 -->

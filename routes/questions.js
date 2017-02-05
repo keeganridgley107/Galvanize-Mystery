@@ -9,18 +9,17 @@ const knex = require('../knex');
 
 
 
-router.get('/', (req, res, next) => {
-    knex('questions')
-
-
-    .then((rows) => {
-            const quizQuestions = (rows);
-            res.send(quizQuestions);
-        })
-        .catch((err) => {
-            next(err);
-        });
-});
+// router.get('/', (req, res, next) => {
+//     knex('questions')
+//
+//     .then((rows) => {
+//             const quizQuestions = (rows);
+//             res.send(quizQuestions);
+//         })
+//         .catch((err) => {
+//             next(err);
+//         });
+// });
 
 
 
