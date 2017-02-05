@@ -9,8 +9,8 @@
 <!-- this is where questions will be generated  -->
 <div ng-if="$ctrl.questionToggleFlag" class="">
 <div class="container">
-  <div ng-reapeat="question in $ctrl.questions" class="col-md-12">
-    <div class="">
+  <div ng-reapeat="question in $ctrl.questions" class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
       <h3> question title {{question.title}} </h3>
       <p> question text {{question.text}} </p>
       <input type="text" name="question_input" placeholder="Input Solution Here" value="">
@@ -26,11 +26,29 @@
 
 <!-- this is where the finalQuestionInput will be in ng-if, which is tied to user outcome from final question, if all questions pass then the input bar will show up  -->
 
+<div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+  <h2 class="">final question text here</h2>
+  </div>
+
+</div>
+
 <!-- when the user submits the finalQuestionInput the HANDSHAKE function fires and sends an SMS to the user -->
+
+<div class="col-md-12 col-sm-12 col-xs-12 final-question-feedback">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+<input type="text" name="" placeholder="Enter Phone Number" value="">
+  </div>
+</div>
+
 
 <!-- this is where the final clue (PI location & RPI-USER & RPI-PASS) will show up (after user login with correct SECRET_TOKEN) -->
 
+
+
 <!-- ALT-ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
+
+
 
 <!-- tech needed:
  HOSTED SITE
