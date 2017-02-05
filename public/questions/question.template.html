@@ -7,12 +7,12 @@
 
 
 <!-- this is where questions will be generated  -->
-<div ng-if="true" class="">
+<div ng-if="$ctrl.questionToggleFlag" class="">
 <div class="container">
   <div ng-reapeat="question in $ctrl.questions" class="col-md-12">
     <div class="">
-      <h3>{{ question.title }}</h3>
-      <p>{{ question.text }}</p>
+      <h3> question title {{question.title}} </h3>
+      <p> question text {{question.text}} </p>
       <input type="text" name="question_input" placeholder="Input Solution Here" value="">
     </div>
   </div>

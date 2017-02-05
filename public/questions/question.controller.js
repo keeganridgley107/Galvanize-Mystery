@@ -12,10 +12,19 @@
 
     function questionCtrl($http) {
         const vm = this;
+
         vm.$onInit = function() {
-          console.log("onInit is running");
+          console.log("onInit ng-if is yes for testing purposes");
+          vm.questionToggleFlag = true;
+
         }; //end of oninit function
 
-     }
+
+
+
+
+
+
+     } //end QuestionController
 
 })();
