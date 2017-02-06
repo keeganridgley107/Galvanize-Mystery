@@ -33,8 +33,8 @@
         vm.finalQuestion = response.data;
         console.log(vm.finalQuestion);
 
-      });
-      
+        });
+
         }; //end of oninit function
 
 
