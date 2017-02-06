@@ -39,16 +39,19 @@
         vm.questionToggle = function() {
             vm.counter = 0;
         };
+        //this function keeps track of the answers the user gets right
 
         vm.questionSubmit =function(question){
           vm.counter++;
 
           console.log(vm.questionAnswer, question.answer1);
         };
+        //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
+
         vm.finalSubmit = function(){
             console.log(vm.finalAnswer, vm.finalQuestion[0].answer1);
         };
-
+        //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function 
 
 
 
