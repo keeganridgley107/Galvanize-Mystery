@@ -6,21 +6,17 @@ const knex = require('../knex');
 //require resources / tools above
 
 
-
-
-
-router.get('/', (req, res, next) => {
-    knex('questions')
-
-    .then((rows) => {
-            const quizQuestions = (rows);
-            res.send(quizQuestions);
-        })
-        .catch((err) => {
-            next(err);
-        });
+router.get('/', function(req, res) {
+  knex('questions')
+  .select ('id', 'title', 'text', 'question_id', 'answer1', 'answer2', 'answer3')
+  .then(function(data) {
+    res.send(data);
+  })
+  .catch(function(err) {
+    res.send(err);
+  });
 });
 
-
+//routes for psql connection to the webpage 
 
 module.exports = router;
