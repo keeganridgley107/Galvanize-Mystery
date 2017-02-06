@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
             id: 1,
             title: 'The First Step',
             text: 'this is a puzzle that leads to a secret page only accessable to the gifted',
-            question_id: 1,
+            image: 'http://www.maydaymystery.org/mayday/offsite/83-nov1.jpg',
             answer1: 'best possible answer',
             answer2: 'possible second answer',
             answer3: 'possible third answer'
@@ -21,7 +21,7 @@ exports.seed = function(knex, Promise) {
             id: 2,
             title: 'second question',
             text: 'this is a riddle using math and CSF concepts to challenge students in gschool',
-            question_id: 2,
+            image: 'http://www.maydaymystery.org/mayday/offsite/90-may1.gif',
             answer1: 'best possible answer',
             answer2: 'possible second answer',
             answer3: 'possible third answer'
@@ -32,7 +32,7 @@ exports.seed = function(knex, Promise) {
             id: 3,
             title: 'Third time is the charm',
             text: 'this is a where we seperate the wheat from the chaff',
-            question_id: 1,
+            image: 'http://www.maydaymystery.org/mayday/offsite/06-May1.jpg',
             answer1: 'best possible answer',
             answer2: 'possible second answer',
             answer3: 'possible third answer'

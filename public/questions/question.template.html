@@ -11,9 +11,16 @@
 <div class="container">
   <div ng-repeat="question in $ctrl.allQuestions" class="">
     <div class="col-md-12 col-sm-12 col-xs-12">
+
       <h3> {{ question.title }} </h3>
+      <div class="img-question-wrapper">
+        <img ng-src="{{question.image}}" class="img-responsive" alt="">
+      </div>
       <p> {{ question.text }} </p>
-      <input type="text" name="question_input" placeholder="Input Solution Here" value="">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <input type="text" name="question_input" placeholder="Solution Here" value="">
+      </div>
+
     </div>
   </div>
 </div>
@@ -59,3 +66,11 @@
  GPS / location service
  CHAT room / service
 -->
+
+
+<!-- question data:
+gps location 
+code challenge based on cipher
+binary convert to decimal
+book / word list (stack-overflow) problem
+console.log hidden msg on surge site  -->

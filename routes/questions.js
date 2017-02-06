@@ -8,7 +8,7 @@ const knex = require('../knex');
 
 router.get('/', function(req, res) {
   knex('questions')
-  .select ('id', 'title', 'text', 'question_id', 'answer1', 'answer2', 'answer3')
+  .select ('id', 'title', 'text', 'image', 'answer1', 'answer2', 'answer3')
   .then(function(data) {
     res.send(data);
   })
@@ -17,6 +17,6 @@ router.get('/', function(req, res) {
   });
 });
 
-//routes for psql connection to the webpage 
+//routes for psql connection to the webpage
 
 module.exports = router;

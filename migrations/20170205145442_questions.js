@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('title').notNullable();
     table.string('text').notNullable();
-    table.integer('question_id').notNullable();
+    table.string('image').notNullable();
     table.string('answer1').notNullable();
     table.string('answer2').notNullable();
     table.string('answer3').notNullable();
