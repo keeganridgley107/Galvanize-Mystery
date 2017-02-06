@@ -4,12 +4,14 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const questions = require('./routes/questions');
+const finalQuestion =require('./routes/final_question');
 const path = require('path');
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/questions', questions);
+app.use('/final_question', finalQuestion);
 
 
 

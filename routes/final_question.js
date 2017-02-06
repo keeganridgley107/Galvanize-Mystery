@@ -6,8 +6,9 @@ const knex = require('../knex');
 //require resources / tools above
 
 
+
 router.get('/', function(req, res) {
-  knex('questions')
+  knex('final_question')
   .select ('id', 'title', 'text', 'image', 'answer1', 'answer2', 'answer3')
   .then(function(data) {
     res.send(data);
@@ -16,7 +17,4 @@ router.get('/', function(req, res) {
     res.send(err);
   });
 });
-
-//routes for psql connection to the webpage
-
 module.exports = router;
