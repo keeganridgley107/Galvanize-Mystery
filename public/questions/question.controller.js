@@ -26,6 +26,15 @@
           console.log(vm.allQuestions);
 
         });
+
+        $http.get('/final_question')
+        .then(function(response)
+        {
+        vm.finalQuestion = response.data;
+        console.log(vm.finalQuestion);
+
+      });
+      
         }; //end of oninit function
 
 
@@ -33,7 +42,7 @@
           vm.counter = 0;
         };
 
-        
+
 
 
 
