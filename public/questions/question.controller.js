@@ -42,7 +42,7 @@
         //this function keeps track of the answers the user gets right
 
         vm.questionSubmit =function(question){
-          console.log(vm.questionAnswer, question);
+          //console.log(vm.questionAnswer, question);
           let tempANS = vm.questionAnswer;
 
           let c = 0;
@@ -50,8 +50,11 @@
 
           if (tempANS === question.answer1 || tempANS === question.answer2 || tempANS === question.answer3) {
             isWin = true;
+            vm.questionAnswer = '';
+            
           }
           console.log(isWin)
+
         };
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
 
