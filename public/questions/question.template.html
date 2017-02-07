@@ -5,11 +5,15 @@
 </div>
 
 
+
 <!-- this is where questions will be generated  -->
+
+
+
 <div ng-if="$ctrl.questionToggleFlag" class="">
     <div class="container">
         <div ng-repeat="question in $ctrl.allQuestions" class="">
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12">
 
                 <h3> {{ question.title }} </h3>
                 <div class="img-question-wrapper">
@@ -24,9 +28,14 @@
             </div>
         </div>
     </div>
-
 </div>
+
+
+
 <!-- end of questions container -->
+
+
+
 
 
 

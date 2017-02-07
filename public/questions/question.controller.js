@@ -13,7 +13,8 @@
     function questionCtrl($http) {
         const vm = this;
 
-        vm.counter = 0;
+        vm.counter = 1;
+        vm.qID = 1;
 
         vm.$onInit = function() {
             vm.questionToggleFlag = true;
@@ -32,26 +33,26 @@
                     console.log(vm.finalQuestion);
 
                 });
-
+                console.log(vm.qID);
         }; //end of oninit function
 
 
         vm.questionToggle = function() {
-            vm.counter = 0;
+            vm.counter = 1;
         };
         //this function keeps track of the answers the user gets right
 
         vm.questionSubmit =function(question){
           //console.log(vm.questionAnswer, question);
           let tempANS = vm.questionAnswer;
-
+          vm.qID = question.id;
           let c = 0;
           let isWin = false;
 
           if (tempANS === question.answer1 || tempANS === question.answer2 || tempANS === question.answer3) {
             isWin = true;
             vm.questionAnswer = '';
-            
+            vm.counter++;
           }
           console.log(isWin)
 
