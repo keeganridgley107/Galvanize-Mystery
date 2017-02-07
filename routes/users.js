@@ -8,7 +8,7 @@ const knex = require('../knex');
 
 router.get('/', function(req, res) {
   knex('users')
-  .select ('*')
+  .select ('id', 'name','userAns', 'plevel')
   .then(function(data) {
     res.send(data);
   })
