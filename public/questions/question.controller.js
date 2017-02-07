@@ -22,6 +22,7 @@
         vm.$onInit = function() {
             vm.questionToggleFlag = true;
             vm.finalQuestionToggleFlag = false;
+            vm.smsFormToggleFlag = false;
 
             $http.get('/questions')
                 .then(function(response) {
@@ -79,6 +80,7 @@
               vm.userANS.push(tempANS);
               vm.finalAnswer = '';
               vm.finalQuestionToggleFlag = false;
+              vm.smsFormToggleFlag = true;
             }
             console.log(isWin, vm.userANS);
         };

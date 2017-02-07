@@ -1,13 +1,8 @@
-<!-- this is where the login (SECRET_TOKEN) input will be -->
-
-<div class="login">
-    <input type="text" name="login_input" placeholder="Login Here" value="">
-</div>
-
 
 
 <!-- this is where questions will be generated  -->
 
+<div class="container">
 
 
 <div ng-if="$ctrl.questionToggleFlag" class="">
@@ -15,14 +10,18 @@
         <div ng-repeat="question in $ctrl.allQuestions" class="">
             <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12">
 
-                <h3> {{ question.title }} </h3>
+                <h3 ng-if="text-center"> {{ question.title }} </h3>
                 <div class="img-question-wrapper">
-                    <img ng-src="{{question.image}}" class="img-responsive" alt="">
+                    <img ng-src="{{question.image}}" class="img-responsive text-center" alt="">
                 </div>
-                <p> {{ question.text }} </p>
+                <p class="text-center"> {{ question.text }} </p>
                 <div class="col-xs-12 col-sm-12 col-md-12">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
                     <input type="text" name="question_input" placeholder="Solution Here" value="" ng-model="$ctrl.questionAnswer">
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
                     <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
+                  </div>
                 </div>
 
             </div>
@@ -61,6 +60,7 @@
 </div>
 
 <!-- when the user submits the finalQuestionInput the HANDSHAKE function fires and sends an SMS to the user -->
+<div class="sms-form" ng-if="$ctrl.smsFormToggleFlag">
 
 <div class="col-md-12 col-sm-12 col-xs-12 final-question-feedback">
     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -80,6 +80,10 @@
     </div>
   </div>
 </div>
+</div>
+
+
+
 <!-- ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
 
 
@@ -101,3 +105,5 @@ code challenge based on cipher
 binary convert to decimal
 book / word list (stack-overflow) problem
 console.log hidden msg on surge site  -->
+
+</div>
