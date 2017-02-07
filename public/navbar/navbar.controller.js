@@ -20,18 +20,24 @@
           console.log(vm.userLogin);
           vm.name = vm.userLogin.name;
           //get req to users route goes here
+          //check to see if name = input
+          //check to see if password is valid
           $http.get(`/users/${vm.name}`)
               .then(function(response) {
                   vm.userData = response.data;
                   //console.log(vm.userData);
                   if (vm.userLogin.password === vm.userData.password) {
-                    console.log("confirmed username");
+
+                    //redirect goes here
+                    alert("confirmed user")
                   }else{
-                    console.log("bummer dude");
+
+                    //failure alert goes here
+                    alert("you do not have access rights... yet.")
                   }
               });
 
-          //if login info === user verify === true
+          
         }
       }
 })();

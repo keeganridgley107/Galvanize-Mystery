@@ -39,18 +39,18 @@
             $http.get('/questions')
                 .then(function(response) {
                     vm.allQuestions = response.data;
-                    console.log(vm.allQuestions);
+                    //console.log(vm.allQuestions);
                     vm.totalQuest = response.data.length;
-                    console.log(vm.totalQuest);
+                    //console.log(vm.totalQuest);
                 });
 
             $http.get('/final_question')
                 .then(function(response) {
                     vm.finalQuestion = response.data;
-                    console.log(vm.finalQuestion);
+                    //console.log(vm.finalQuestion);
 
                 });
-                console.log(vm.qID);
+                //console.log(vm.qID);
         }; //end of oninit function
 
 
