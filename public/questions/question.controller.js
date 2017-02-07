@@ -24,6 +24,8 @@
             vm.finalQuestionToggleFlag = false;
             vm.smsFormToggleFlag = false;
 
+
+
             $http.get('/questions')
                 .then(function(response) {
                     vm.allQuestions = response.data;
