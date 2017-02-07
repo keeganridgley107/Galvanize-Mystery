@@ -20,7 +20,12 @@
           console.log(vm.userLogin);
 
           //get req to users route goes here
-          
+          $http.get('/users')
+              .then(function(response) {
+                  vm.allUsers = response.data;
+                  console.log(vm.allUsers);
+                  
+              });
           //if login info === user verify === true
         }
       }

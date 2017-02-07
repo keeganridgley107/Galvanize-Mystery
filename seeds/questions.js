@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
             text: 'this is a puzzle that leads to a secret page only accessable to the gifted',
             image: 'http://www.maydaymystery.org/mayday/offsite/83-nov1.jpg',
             answer1: 'galvanize',
-            answer2: 'flatirons',
+            answer2: '255',
             answer3: 'boulder'
           }
         ),
@@ -33,9 +33,9 @@ exports.seed = function(knex, Promise) {
             title: 'Third time is the charm',
             text: 'this is a where we seperate the wheat from the chaff',
             image: 'http://www.maydaymystery.org/mayday/offsite/06-May1.jpg',
-            answer1: 'best possible answer',
-            answer2: 'possible second answer',
-            answer3: 'possible third answer'
+            answer1: '8228',
+            answer2: 'NaN',
+            answer3: 'undefined'
           }
         )
       ]);
