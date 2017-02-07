@@ -3,9 +3,9 @@
 </div>
 <div class="custom-login col-md-12 col-sm-12 col-xs-12">
   <div class="col-md-6 col-sm-7 col-xs-12">
-    <input type="text" name="login_user" placeholder="User" value="">
-    <input type="text" name="login_pass" placeholder="Password" value="">
-    <button type="button" name="button">LOGIN</button>
+    <input type="text" name="login_user" placeholder="User" ng-model="$ctrl.userLogin.name" value="">
+    <input type="text" name="login_pass" placeholder="Password" ng-model="$ctrl.userLogin.password" value="">
+    <button type="button" name="button" ng-click="$ctrl.userLoginVerify()">LOGIN</button>
 
   </div>
   <div class="col-md-4 col-sm-1">
