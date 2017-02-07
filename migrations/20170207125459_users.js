@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('name').notNullable();
     table.string('plevel').notNullable();
     table.string('userAns').notNullable();
+    table.string('password').notNullable();
   });
 };
 

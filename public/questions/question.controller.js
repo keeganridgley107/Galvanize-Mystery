@@ -26,6 +26,12 @@
             vm.beginToggle = false;
 
             console.log(localStorage.getItem('userAns'));
+            if (localStorage.getItem('userAns') === undefined){
+              console.log("user has not finshed mayday");
+            }else{
+              console.log("user has completed mayday");
+              //window.location = "this is my secret site.com"
+            }
             // check for localStorage if yes
             // user has already completed the mystery
             // redirect to secret_page
