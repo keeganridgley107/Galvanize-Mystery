@@ -23,7 +23,7 @@
             vm.questionToggleFlag = true;
             vm.finalQuestionToggleFlag = false;
             vm.smsFormToggleFlag = false;
-
+            vm.beginToggle = false;
 
 
             $http.get('/questions')
@@ -86,6 +86,7 @@
             }
             console.log(isWin, vm.userANS);
         };
+
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
         vm.handshakeFunction = function(){
