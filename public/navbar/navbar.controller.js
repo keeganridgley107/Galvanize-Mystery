@@ -18,17 +18,19 @@
         }
         vm.userLoginVerify = function(){
           console.log(vm.userLogin);
-
+          vm.name = vm.userLogin.name;
           //get req to users route goes here
-          $http.get('/users')
+          $http.get(`/users/${vm.name}`)
               .then(function(response) {
-                  vm.allUsers = response.data;
-                  console.log(vm.allUsers);
-
+                  vm.userData = response.data;
+                  //console.log(vm.userData);
+                  if (vm.userLogin.password === vm.userData.password) {
+                    console.log("confirmed username");
+                  }else{
+                    console.log("bummer dude");
+                  }
               });
-            if (true) {
 
-            }
           //if login info === user verify === true
         }
       }
