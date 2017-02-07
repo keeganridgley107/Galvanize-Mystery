@@ -15,16 +15,17 @@
 
         vm.counter = 1;
         vm.qID = 1;
-
+        vm.totalQuest = 0;
         vm.$onInit = function() {
             vm.questionToggleFlag = true;
-            vm.finalQuestionToggleFlag = true;
+            vm.finalQuestionToggleFlag = false;
 
             $http.get('/questions')
                 .then(function(response) {
                     vm.allQuestions = response.data;
                     console.log(vm.allQuestions);
-
+                    vm.totalQuest = response.data.length;
+                    console.log(vm.totalQuest);
                 });
 
             $http.get('/final_question')
@@ -46,21 +47,34 @@
           //console.log(vm.questionAnswer, question);
           let tempANS = vm.questionAnswer;
           vm.qID = question.id;
-          let c = 0;
           let isWin = false;
 
           if (tempANS === question.answer1 || tempANS === question.answer2 || tempANS === question.answer3) {
             isWin = true;
             vm.questionAnswer = '';
             vm.counter++;
+            if (vm.counter === (vm.totalQuest + 1)) {
+              vm.finalQuestionToggleFlag = true;
+            }
           }
-          console.log(isWin)
+          console.log(isWin);
+          console.log(vm.counter, vm.totalQuest);
 
         };
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
 
         vm.finalSubmit = function(){
             console.log(vm.finalAnswer, vm.finalQuestion[0].answer1);
+
+            let tempANS = vm.finalAnswer;
+            let isWin = false;
+
+            if (tempANS === vm.finalQuestion[0].answer1 || tempANS === vm.finalQuestion[0].answer2 || tempANS === vm.finalQuestion[0].answer3) {
+              isWin = true;
+              vm.finalAnswer = '';
+
+            }
+            console.log(isWin)
         };
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
