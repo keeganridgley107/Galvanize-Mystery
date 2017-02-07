@@ -51,8 +51,12 @@
         vm.finalSubmit = function(){
             console.log(vm.finalAnswer, vm.finalQuestion[0].answer1);
         };
-        //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function 
+        //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
+        vm.handshakeFunction = function(){
+          console.log(vm.handshake.phone);
+        };
+        //this function will fire a SMS to the number provided with a set msg payload if it is actually a series of numbers (check for chars other than 0-9 and handle kebab-case)
 
 
     } //end QuestionController
