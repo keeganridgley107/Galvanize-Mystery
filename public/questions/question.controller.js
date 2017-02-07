@@ -13,7 +13,7 @@
     function questionCtrl($http) {
         const vm = this;
 
-
+        vm.counter = 0;
 
         vm.$onInit = function() {
             vm.questionToggleFlag = true;
@@ -42,9 +42,16 @@
         //this function keeps track of the answers the user gets right
 
         vm.questionSubmit =function(question){
-          vm.counter++;
+          console.log(vm.questionAnswer, question);
+          let tempANS = vm.questionAnswer;
 
-          console.log(vm.questionAnswer, question.answer1);
+          let c = 0;
+          let isWin = false;
+
+          if (tempANS === question.answer1 || tempANS === question.answer2 || tempANS === question.answer3) {
+            isWin = true;
+          }
+          console.log(isWin)
         };
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
 
@@ -55,6 +62,7 @@
 
         vm.handshakeFunction = function(){
           console.log(vm.handshake.phone);
+
         };
         //this function will fire a SMS to the number provided with a set msg payload if it is actually a series of numbers (check for chars other than 0-9 and handle kebab-case)
 

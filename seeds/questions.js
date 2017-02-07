@@ -11,9 +11,9 @@ exports.seed = function(knex, Promise) {
             title: 'The First Step',
             text: 'this is a puzzle that leads to a secret page only accessable to the gifted',
             image: 'http://www.maydaymystery.org/mayday/offsite/83-nov1.jpg',
-            answer1: 'best possible answer',
-            answer2: 'possible second answer',
-            answer3: 'possible third answer'
+            answer1: 'galvanize',
+            answer2: 'flatirons',
+            answer3: 'boulder'
           }
         ),
         knex('questions').insert(
@@ -22,9 +22,9 @@ exports.seed = function(knex, Promise) {
             title: 'second question',
             text: 'this is a riddle using math and CSF concepts to challenge students in gschool',
             image: 'http://www.maydaymystery.org/mayday/offsite/90-may1.gif',
-            answer1: 'best possible answer',
-            answer2: 'possible second answer',
-            answer3: 'possible third answer'
+            answer1: 'java',
+            answer2: 'compile',
+            answer3: '3.14'
           }
         ),
         knex('questions').insert(

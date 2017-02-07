@@ -11,9 +11,9 @@ exports.seed = function(knex, Promise) {
             title: 'The last Step',
             text: 'YOU ARE ALMOST THERE, Remember: this leads to a secret page only accessable to the gifted',
             image: 'http://www.maydaymystery.org/mayday/offsite/15_may1.jpg',
-            answer1: 'best possible answer',
-            answer2: 'possible second answer',
-            answer3: 'possible third answer'
+            answer1: '5280',
+            answer2: '255',
+            answer3: 'maydaymystery'
           }
         )
       ]);
