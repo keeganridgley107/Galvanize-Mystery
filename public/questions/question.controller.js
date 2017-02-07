@@ -25,6 +25,10 @@
             vm.smsFormToggleFlag = false;
             vm.beginToggle = false;
 
+            console.log(localStorage.getItem('userAns'));
+            // check for localStorage if yes
+            // user has already completed the mystery
+            // redirect to secret_page
 
             $http.get('/questions')
                 .then(function(response) {
@@ -64,9 +68,13 @@
             if (vm.counter === (vm.totalQuest + 1)) {
               vm.finalQuestionToggleFlag = true;
             }
+          }else{
+            //failure msg goes here (modal or whatev)
+            alert("this is not a correct answer, plese try again");
+            vm.questionAnswer = '';
           }
-          console.log(isWin);
-          console.log(vm.userANS);
+          //console.log(isWin);
+          //console.log(vm.userANS);
 
         };
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
@@ -83,8 +91,9 @@
               vm.finalAnswer = '';
               vm.finalQuestionToggleFlag = false;
               vm.smsFormToggleFlag = true;
+              localStorage.setItem("userAns", vm.userANS);
             }
-            console.log(isWin, vm.userANS);
+            console.log(isWin, localStorage.getItem("userAns"));
         };
 
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function

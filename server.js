@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const questions = require('./routes/questions');
 const finalQuestion =require('./routes/final_question');
 const path = require('path');
-const request = require('request');
+//const request = require('request');
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
