@@ -100,15 +100,14 @@
               //not used in current code
               //todo: pivot feature using better api
               localStorage.setItem("userAns", vm.userANS);
-              alert("N47_35_56.223");
+
               alert("f0110w");
-              alert("W122_20_1.684");
               alert("th3");
-              alert("40.0165447");
+              alert("40.0165447"); //gal-gps
               alert("#ffffff");
-              alert("-105.28168599999998");
+              alert("-105.28168599999998"); //gal-gps
               alert("r4bb1t");
-              alert("0x27 DOT 0x57791DC7D24C COMMA NEG0x69 DOT 0x2E53AE0E3DB9 ");
+              alert("0x27 DOT 0x57791DC7D24C COMMA NEG0x69 DOT 0x2E53AE0E3DB9 "); //8228-gps
             }
             console.log(isWin, localStorage.getItem("userAns"));
         };
