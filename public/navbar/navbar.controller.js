@@ -14,7 +14,7 @@
         const vm = this;
 
         vm.$onInit = function() {
-
+          vm.loginFlag = false;
         }
         vm.userLoginVerify = function(){
           console.log(vm.userLogin);
@@ -37,7 +37,18 @@
                   }
               });
 
-          
-        }
+
+        } // end of login verify function
+
+
+        vm.loginFlagToggle = function(){
+          if (vm.loginFlag) {
+            vm.loginFlag = false;
+          }else{
+            vm.loginFlag = true;
+          }
+
+
+        }//end of loginFlagToggle function
       }
 })();
