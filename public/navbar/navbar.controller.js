@@ -15,7 +15,7 @@
 
         vm.$onInit = function() {
           vm.loginFlag = false;
-          vm.adminFlag = false;
+          vm.adminFlag = true;
         }
         vm.userLoginVerify = function(){
           console.log(vm.userLogin);
