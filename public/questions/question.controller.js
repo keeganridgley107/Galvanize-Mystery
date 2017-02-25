@@ -22,11 +22,11 @@
         vm.$onInit = function() {
             vm.questionToggleFlag = true;
             vm.finalQuestionToggleFlag = false;
-            vm.smsFormToggleFlag = false;
+            //vm.smsFormToggleFlag = false;
             vm.beginToggle = false;
 
-            console.log(localStorage.getItem('userAns'));
-            if (localStorage.getItem('userAns') === undefined){
+            //console.log(localStorage.getItem('userAns'));
+            if (localStorage.getItem('userAns') === null){
               console.log("user has not finshed mayday");
             }else{
               console.log("user has completed mayday");
@@ -60,14 +60,20 @@
         //this function keeps track of the answers the user gets right
 
         vm.questionSubmit =function(question){
+          //debug submit log here
           //console.log(vm.questionAnswer, question);
+
           let tempANS = vm.questionAnswer;
           vm.qID = question.id;
           let isWin = false;
 
           if (tempANS === question.answer1 || tempANS === question.answer2 || tempANS === question.answer3) {
             isWin = true;
+
             //this means the user has correct answer
+
+            //insert awesome animation here!!1
+
             vm.userANS.push(tempANS);
             vm.questionAnswer = '';
             vm.counter++;
@@ -78,6 +84,9 @@
             //failure msg goes here (modal or whatev)
             alert("this is not a correct answer, plese try again");
             vm.questionAnswer = '';
+
+            //insert failure animation here!!
+
           }
           //console.log(isWin);
           //console.log(vm.userANS);
@@ -86,7 +95,6 @@
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
 
         vm.finalSubmit = function(){
-            //console.log(vm.finalAnswer, vm.finalQuestion[0].answer1);
 
             let tempANS = vm.finalAnswer;
             let isWin = false;
@@ -96,28 +104,25 @@
               vm.userANS.push(tempANS);
               vm.finalAnswer = '';
               vm.finalQuestionToggleFlag = false;
-              //vm.smsFormToggleFlag = true;
-              //not used in current code
-              //todo: pivot feature using better api
+
               localStorage.setItem("userAns", vm.userANS);
 
-              alert("f0110w");
-              alert("th3");
-              alert("40.0165447"); //gal-gps
-              alert("#ffffff");
-              alert("-105.28168599999998"); //gal-gps
-              alert("r4bb1t");
-              alert("0x27 DOT 0x57791DC7D24C COMMA NEG0x69 DOT 0x2E53AE0E3DB9 "); //8228-gps
+
+
+              vm.section2InfoFlag = true;
+
+              //todo: this is where the redirect to a better animated location page will be
+
             }
             console.log(isWin, localStorage.getItem("userAns"));
         };
 
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
-        vm.handshakeFunction = function(){
-          console.log(vm.handshake.phone);
-
-        };
+        // vm.handshakeFunction = function(){
+        //   console.log(vm.handshake.phone);
+        //
+        // };
         //todo: PIVOT this using a working sms/email API
 
         //this function will fire a SMS to the number provided with a set msg payload if it is actually a series of numbers (check for chars other than 0-9 and handle kebab-case)
