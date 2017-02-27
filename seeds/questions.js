@@ -8,23 +8,23 @@ exports.seed = function(knex, Promise) {
         knex('questions').insert(
           {
             id: 1,
-            title: 'The First Step',
-            text: 'this is a puzzle that leads to a secret page only accessable to the gifted',
-            image: 'http://www.maydaymystery.org/mayday/offsite/83-nov1.jpg',
-            answer1: 'galvanize',
-            answer2: '255',
-            answer3: 'boulder'
+            title: 'Question 1',
+            text: 'What is the correct HTML for referring to an external stylesheet?',
+            image: 'media/frontend-questions/1.jpg',
+            answer1: 'option1',
+            answer2: ' option2',
+            answer3: ' option3'
           }
         ),
         knex('questions').insert(
           {
             id: 2,
-            title: 'second question',
-            text: 'this is a riddle using math and CSF concepts to challenge students in gschool',
-            image: 'http://www.maydaymystery.org/mayday/offsite/90-may1.gif',
-            answer1: 'java',
-            answer2: 'compile',
-            answer3: '3.14'
+            title: 'Question 2',
+            text: 'Which HTML tag is used to define an internal stylesheet?',
+            image: 'media/frontend-questions/2.jpg',
+            answer1: 'option1',
+            answer2: ' option2',
+            answer3: ' option3'
           }
         ),
         knex('questions').insert(
@@ -32,12 +32,24 @@ exports.seed = function(knex, Promise) {
             id: 3,
             title: 'Third time is the charm',
             text: 'this is a where we seperate the wheat from the chaff',
-            image: 'http://www.maydaymystery.org/mayday/offsite/06-May1.jpg',
+            image: 'media/frontend-questions/3.jpg',
+            answer1: '8228',
+            answer2: 'NaN',
+            answer3: 'undefined'
+          }
+        ),
+        knex('questions').insert(
+          {
+            id: 4,
+            title: 'Third time is the charm',
+            text: 'this is a where we seperate the wheat from the chaff',
+            image: 'media/frontend-questions/4.jpg',
             answer1: '8228',
             answer2: 'NaN',
             answer3: 'undefined'
           }
         )
+
       ]);
     });
 };

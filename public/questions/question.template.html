@@ -1,80 +1,89 @@
-
 <!-- this button begins the game -->
 <div class="col-md-12 col-sm-12 col-xs-12">
-  <div class="col-md-4 col-sm-4 col-xs-4">
+    <div class="col-md-4 col-sm-4 col-xs-4">
 
-  </div>
-  <div ng-hide="$ctrl.beginToggle" class="col-md-4 col-sm-4 col-xs-4">
-    <button type="button" ng-click="$ctrl.beginToggle = true" name="button">Begin The Great Game</button>
+    </div>
+    <div id="start-button" ng-hide="$ctrl.beginToggle" class="col-md-4 col-sm-4 col-xs-4 text-center">
+        <button type="button" ng-click="$ctrl.beginToggle = true" name="button">Begin The Great Game</button>
 
-  </div>
-  <div class="col-md-4 col-sm-4 col-xs-4">
+    </div>
 
-  </div>
+
+
 </div>
 
 <!-- this is where questions will be generated  -->
 
-<div ng-if="$ctrl.beginToggle" class="container">
-<div ng-if="$ctrl.questionToggleFlag" class="">
-    <div class="container">
-        <div ng-repeat="question in $ctrl.allQuestions" class="">
-            <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12">
+<div ng-if="$ctrl.beginToggle">
+    <div ng-if="$ctrl.questionToggleFlag" class="">
+        <div class="">
+            <div ng-repeat="question in $ctrl.allQuestions" class="">
+                <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 ">
 
-                <h3 ng-if="text-center"> {{ question.title }} </h3>
-                <div class="img-question-wrapper">
-                    <img ng-src="{{question.image}}" class="img-responsive text-center" alt="">
+                    <h3 class="text-center"> {{ question.title }} </h3>
+                    <div class="">
+                        <img ng-src="{{question.image}}" class="img-responsive center-block" alt="">
+                    </div>
+                    <p class="text-center"> {{ question.text }} </p>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+
+                            <input type="radio" name="question_input"
+                            id="questionRadios1"  value="option1" ng-model="$ctrl.questionAnswer">
+
+
+    <input class="" type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer">
+
+
+
+    <input class="" type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer">
+
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
+                        </div>
+                    </div>
+
                 </div>
-                <p class="text-center"> {{ question.text }} </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- end of questions container -->
+
+
+
+
+
+
+
+    <!-- this is where the finalQuestionInput will be in ng-if, which is tied to user outcome from final question, if all questions pass then the input bar will show up  -->
+
+    <div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
+        <div class="">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2 class="">{{$ctrl.finalQuestion[0].title}}</h2>
+                <div class="">
+                    <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive" alt="">
+                </div>
+                <p>{{$ctrl.finalQuestion[0].text}}</p>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <input type="text" name="question_input" placeholder="Solution Here" value="" ng-model="$ctrl.questionAnswer">
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
-                  </div>
+                    <input ng-model="$ctrl.finalAnswer" type="text" name="question_input" placeholder="Solution Here" value="">
+                    <button type="button" name="button" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
                 </div>
-
             </div>
         </div>
-    </div>
-</div>
 
-
-
-<!-- end of questions container -->
-
-
-
-
-
-
-
-<!-- this is where the finalQuestionInput will be in ng-if, which is tied to user outcome from final question, if all questions pass then the input bar will show up  -->
-
-<div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
-    <div class="">
-        
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <h2 class="">{{$ctrl.finalQuestion[0].title}}</h2>
-            <div class="">
-                <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive" alt="">
-            </div>
-            <p>{{$ctrl.finalQuestion[0].text}}</p>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <input ng-model="$ctrl.finalAnswer" type="text" name="question_input" placeholder="Solution Here" value="">
-                <button type="button" name="button" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
-            </div>
-        </div>
     </div>
 
-</div>
-
-<!-- when the user submits the finalQuestionInput the HANDSHAKE function fires and sends an SMS to the user -->
+    <!-- when the user submits the finalQuestionInput the HANDSHAKE function fires and sends an SMS to the user -->
 
 
-<!-- HANDSHAKE function needs to pivot around working platform or api, email, sms and push notifications ALL fail currently!!! -->
-<!--
+    <!-- HANDSHAKE function needs to pivot around working platform or api, email, sms and push notifications ALL fail currently!!! -->
+    <!--
 <div class="sms-form" ng-if="$ctrl.smsFormToggleFlag">
 
 <div class="col-md-12 col-sm-12 col-xs-12 final-question-feedback">
@@ -87,11 +96,11 @@
 
 
 
-<!-- ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
+    <!-- ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
 
 
 
-<!-- tech needed:
+    <!-- tech needed:
  HOSTED SITE
  RPI SERVER (running forever)
  QR code generator
@@ -102,7 +111,7 @@
 -->
 
 
-<!-- question data:
+    <!-- question data:
 gps location
 code challenge based on cipher
 binary convert to decimal
@@ -112,20 +121,20 @@ console.log hidden msg on surge site  -->
 
 
 
-<div ng-if="$ctrl.section2InfoFlag" class="container">
-  <div class="col-md-12 col-sm-12">
-    <div class="col-sm-4 col-md-4 ">
+    <div ng-if="$ctrl.section2InfoFlag" class="container">
+        <div class="col-md-12 col-sm-12">
+            <div class="col-sm-4 col-md-4 ">
+
+            </div>
+            <div class="col-sm-4 col-md-4 ">
+                <h1>F0110w th3 #ffffff oryctolagus cuniculus</h1>
+                <p>0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
+            </div>
+            <div class="col-sm-4 col-md-4 ">
+
+            </div>
+        </div>
 
     </div>
-    <div class="col-sm-4 col-md-4 ">
-      <h1>F0110w th3 #ffffff oryctolagus cuniculus</h1>
-      <p>0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
-    </div>
-    <div class="col-sm-4 col-md-4 ">
-
-    </div>
-  </div>
-
-</div>
 
 </div>

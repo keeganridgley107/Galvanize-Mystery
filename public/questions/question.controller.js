@@ -61,7 +61,7 @@
 
         vm.questionSubmit =function(question){
           //debug submit log here
-          //console.log(vm.questionAnswer, question);
+          console.log(vm.questionAnswer, question);
 
           let tempANS = vm.questionAnswer;
           vm.qID = question.id;
