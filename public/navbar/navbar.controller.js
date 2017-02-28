@@ -20,13 +20,11 @@
         vm.userLoginVerify = function(){
           console.log(vm.userLogin);
           vm.name = vm.userLogin.name;
-          //get req to users route goes here
-          //check to see if name = input
-          //check to see if password is valid
+
           $http.get(`/users/${vm.name}`)
               .then(function(response) {
                   vm.userData = response.data;
-                  //console.log(vm.userData);
+                  
                   if (vm.userLogin.password === vm.userData.password) {
 
                     //redirect goes here
