@@ -12,8 +12,8 @@ exports.seed = function(knex, Promise) {
             text: 'What is the correct HTML for referring to an external stylesheet?',
             image: 'media/frontend-questions/1.jpg',
             answer1: 'option1',
-            answer2: ' option2',
-            answer3: ' option3'
+            answer2: '!option2',
+            answer3: '!option3'
           }
         ),
         knex('questions').insert(
@@ -23,30 +23,30 @@ exports.seed = function(knex, Promise) {
             text: 'Which HTML tag is used to define an internal stylesheet?',
             image: 'media/frontend-questions/2.jpg',
             answer1: 'option1',
-            answer2: ' option2',
-            answer3: ' option3'
+            answer2: '!option2',
+            answer3: '!option3'
           }
         ),
         knex('questions').insert(
           {
             id: 3,
-            title: 'Third time is the charm',
-            text: 'this is a where we seperate the wheat from the chaff',
+            title: 'Question 3',
+            text: 'What is the correct CSS syntax?',
             image: 'media/frontend-questions/3.jpg',
-            answer1: '8228',
-            answer2: 'NaN',
-            answer3: 'undefined'
+            answer1: '!option1',
+            answer2: '!option2',
+            answer3: 'option3'
           }
         ),
         knex('questions').insert(
           {
             id: 4,
-            title: 'Third time is the charm',
-            text: 'this is a where we seperate the wheat from the chaff',
+            title: 'Question 4',
+            text: 'How do you add a background color for all <h1> elements?',
             image: 'media/frontend-questions/4.jpg',
-            answer1: '8228',
-            answer2: 'NaN',
-            answer3: 'undefined'
+            answer1: '!option1',
+            answer2: 'option2',
+            answer3: '!option3'
           }
         )
 

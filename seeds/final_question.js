@@ -8,12 +8,12 @@ exports.seed = function(knex, Promise) {
         knex('final_question').insert(
           {
             id: 1,
-            title: 'The last Step',
-            text: 'YOU ARE ALMOST THERE, Remember: this leads to a secret page only accessable to the gifted',
-            image: 'http://www.maydaymystery.org/mayday/offsite/15_may1.jpg',
-            answer1: '5280',
-            answer2: '255',
-            answer3: 'maydaymystery'
+            title: 'Final Question',
+            text: 'How do you display a hyperlink without an underline?',
+            image: 'media/frontend-questions/5.jpg',
+            answer1: 'option1',
+            answer2: '!option2',
+            answer3: '!option3'
           }
         )
       ]);

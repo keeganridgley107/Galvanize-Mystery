@@ -18,18 +18,18 @@
     <div ng-if="$ctrl.questionToggleFlag" class="">
         <div class="">
             <div ng-repeat="question in $ctrl.allQuestions" class="">
-                <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 ">
+                <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 center-block text-center ">
 
                     <h3 class="text-center"> {{ question.title }} </h3>
+                    <h1 class="text-center"> {{ question.text }} </h1>
 
                     <div class="container">
                         <img ng-src="{{question.image}}" class="img-responsive center-block" width="400" alt="image">
                     </div>
 
-                    <p class="text-center"> {{ question.text }} </p>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="col-md-6 col-sm-6 col-xs-6 center-block text-center">
+
                           <div class="form-check form-check-inline">
                           <label class="form-check-label">
                             <input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer"> A
@@ -48,9 +48,9 @@
                           </label>
                           </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6">
+
                             <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
-                        </div>
+
                     </div>
 
                 </div>
@@ -64,23 +64,37 @@
 
 
 
-
-
-
-
-    <!-- this is where the finalQuestionInput will be in ng-if, which is tied to user outcome from final question, if all questions pass then the input bar will show up  -->
+    <!-- this is where the finalQuestionInput will be, if all questions pass then the input bar will show up  -->
 
     <div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
         <div class="">
 
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <h2 class="">{{$ctrl.finalQuestion[0].title}}</h2>
+            <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center">
+                <h3 class="">{{$ctrl.finalQuestion[0].title}}</h3>
+                <h1>{{$ctrl.finalQuestion[0].text}}</h1>
                 <div class="">
-                    <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive" alt="">
+                    <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive center-block" width="400" alt="">
                 </div>
-                <p>{{$ctrl.finalQuestion[0].text}}</p>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <input ng-model="$ctrl.finalAnswer" type="text" name="question_input" placeholder="Solution Here" value="">
+
+                  <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" name="question_input" id="finalQuestionRadios1" value="option1" ng-model="$ctrl.finalAnswer"> A
+                  </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+          <label class="form-check-label">
+                    <input class="" type="radio" name="question_input" id="finalQuestionRadios2" value="option2" ng-model="$ctrl.finalAnswer"> B
+                  </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="" type="radio" name="question_input" id="finalQuestionRadios3" value="option3" ng-model="$ctrl.finalAnswer"> C
+                  </label>
+                  </div>
+
                     <button type="button" name="button" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
                 </div>
             </div>
@@ -131,17 +145,13 @@ console.log hidden msg on surge site  -->
 
 
     <div ng-if="$ctrl.section2InfoFlag" class="container">
-        <div class="col-md-12 col-sm-12">
-            <div class="col-sm-4 col-md-4 ">
+        <div class="col-md-12 col-sm-12 center-block text-center">
 
-            </div>
-            <div class="col-sm-4 col-md-4 ">
+
                 <h1>F0110w th3 #ffffff oryctolagus cuniculus</h1>
                 <p>0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
-            </div>
-            <div class="col-sm-4 col-md-4 ">
 
-            </div>
+
         </div>
 
     </div>
