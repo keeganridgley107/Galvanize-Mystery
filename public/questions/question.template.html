@@ -21,23 +21,32 @@
                 <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 ">
 
                     <h3 class="text-center"> {{ question.title }} </h3>
-                    <div class="">
-                        <img ng-src="{{question.image}}" class="img-responsive center-block" alt="">
+
+                    <div class="container">
+                        <img ng-src="{{question.image}}" class="img-responsive center-block" width="400" alt="image">
                     </div>
+
                     <p class="text-center"> {{ question.text }} </p>
+
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-md-6 col-sm-6 col-xs-6 center-block text-center">
+                          <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer"> A
+                          </label>
+                        </div>
 
-                            <input type="radio" name="question_input"
-                            id="questionRadios1"  value="option1" ng-model="$ctrl.questionAnswer">
+                        <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                            <input class="" type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer"> B
+                          </label>
+                          </div>
 
-
-    <input class="" type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer">
-
-
-
-    <input class="" type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer">
-
+                          <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="" type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer"> C
+                          </label>
+                          </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
