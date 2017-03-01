@@ -6,7 +6,7 @@
     background-image:
     linear-gradient(
       to right,
-      #595959,
+      #595950,
       #595959 15%,
       #FFFFFf 15%,
       #FFFFFf 85%,
@@ -16,15 +16,17 @@
 </style>
 
 <div class="col-md-12 col-sm-12 col-xs-12 center-el">
+<div class="container about-box text-center center-block" ng-hide="$ctrl.beginToggle">
+  <h1>Welcome to Galvanize Mystery</h1>
 
-    <div id="start-button" ng-hide="$ctrl.beginToggle" class="text-center">
-      <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
-  <span class="box__blurb ">PLAY</span>
-  <span class="rect__blurb">THE GAME</span>
-</div>
-        <!-- <button type="button" class="btn" id="start-game-button" ng-click="$ctrl.beginToggle = true" name="button">Begin The Game</button> -->
-
+  <h3>An interactive three part puzzle game that challnges users solve questions based on aspects of web development while searching out a secret server conatining clues to a hidden reward! </h3>
+  <div id="start-button" ng-hide="$ctrl.beginToggle" class="text-center center-block">
+    <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
+      <span class="box__blurb ">CLICK</span>
+      <span class="rect__blurb">TO PLAY THE GAME</span>
     </div>
+  </div>
+</div>
 
 
 
@@ -86,33 +88,33 @@
 <!-- this is where the finalQuestionInput will be, if all questions pass then the input bar will show up  -->
 
 <div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
-    <div class="">
+    <div class="container">
 
         <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center">
             <h3 class="">{{$ctrl.finalQuestion[0].title}}</h3>
             <h1>{{$ctrl.finalQuestion[0].text}}</h1>
             <div class="final-image-wrapper">
 
-                <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive center-block" width="400" alt="">
+                <img ng-src="{{$ctrl.finalQuestion[0].image}}" class="img-responsive question-img center-block" width="400" alt="">
 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <div class="btn-group" data-toggle="radios">
-                    <label class="btn btn-primary">
+                    <label class="btn btn-color">
 <input type="radio" name="question_input" id="final-question-radios1" value="option1" ng-model="$ctrl.finalAnswer" > ANSWER A
 </label>
-                    <label class="btn btn-primary">
+                    <label class="btn btn-color">
 <input type="radio" name="question_input" id="final-question-radios2" value="option2" ng-model="$ctrl.finalAnswer" > ANSWER B
 </label>
-                    <label class="btn btn-primary">
+                    <label class="btn btn-color">
 <input type="radio" name="question_input" id="final-question-radios3" value="option3" ng-model="$ctrl.finalAnswer" > ANSWER C
 </label>
 
                 </div>
 
             </div>
-            <button type="button" name="button" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
+            <button type="button" name="button" class="btn-color" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
         </div>
     </div>
 
@@ -161,11 +163,11 @@ console.log hidden msg on surge site  -->
 
 
 <div ng-if="$ctrl.section2InfoFlag" class="container">
-    <div class="col-md-12 col-sm-12 center-block text-center">
+    <div class="col-md-12 col-sm-12 center-block text-center final-location-box">
 
 
-        <h1>F0110w th3 #ffffff oryctolagus cuniculus</h1>
-        <p>0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
+        <h1 id="location-text1">F0110w th3 #ffffff oryctolagus cuniculus</h1>
+        <p id="location-text2">0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
 
 
     </div>
