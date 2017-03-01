@@ -1,10 +1,28 @@
 <!-- this button begins the game -->
-<div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="col-md-4 col-sm-4 col-xs-4">
 
-    </div>
-    <div id="start-button" ng-hide="$ctrl.beginToggle" class="col-md-4 col-sm-4 col-xs-4 text-center">
-        <button type="button" id="start-game-button" ng-click="$ctrl.beginToggle = true" name="button">Begin The Great Game</button>
+<style >
+  body{
+
+    background-image:
+    linear-gradient(
+      to right,
+      #595959,
+      #595959 15%,
+      #FFFFFf 15%,
+      #FFFFFf 85%,
+      #595959 85%
+    ) !important;
+  }
+</style>
+
+<div class="col-md-12 col-sm-12 col-xs-12 center-el">
+
+    <div id="start-button" ng-hide="$ctrl.beginToggle" class="text-center">
+      <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
+  <span class="box__blurb ">PLAY</span>
+  <span class="rect__blurb">THE GAME</span>
+</div>
+        <!-- <button type="button" class="btn" id="start-game-button" ng-click="$ctrl.beginToggle = true" name="button">Begin The Game</button> -->
 
     </div>
 
@@ -19,34 +37,38 @@
         <div class="">
             <div ng-repeat="question in $ctrl.allQuestions" class="">
                 <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 center-block text-center ">
-
+                  <div class="container ">
+                      <div class="question-box">
                     <h3 class="text-center"> {{ question.title }} </h3>
                     <h1 class="text-center"> {{ question.text }} </h1>
 
                     <div class="container" id="img-wrapper">
-                        <img ng-src="{{question.image}}" class="img-responsive center-block" width="400" alt="image">
+                      <img ng-src="{{question.image}}" class="img-responsive center-block question-img" width="400" alt="image">
 
                     </div>
 
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
 
-                        <div class="btn-group" data-toggle="radios">
-                            <label class="btn btn-primary">
-<input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer" > ANSWER A
-</label>
-                            <label class="btn btn-primary">
-<input type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer" > ANSWER B
-</label>
-                            <label class="btn btn-primary">
-<input type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer" > ANSWER C
-</label>
+                      <div class="btn-group" data-toggle="radios">
+                        <label class="btn  btn-color">
+                          <input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer" > ANSWER A
+                        </label>
+                        <label class="btn  btn-color">
+                          <input type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer" > ANSWER B
+                        </label>
+                        <label class="btn btn-color">
+                          <input type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer" > ANSWER C
+                        </label>
 
-                        </div>
+                      </div>
 
                     </div>
 
-                    <button type="button" name="button" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
+                    <button type="button" name="button" class="btn-color btn-submit" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
+
+                    </div>
+                  </div>
 
                 </div>
 

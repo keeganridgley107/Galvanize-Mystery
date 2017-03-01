@@ -1,8 +1,165 @@
+body{
+  /*background-color: rgba(0, 0, 0, .13);*/
+
+}
 #start-game-button{
-  top: 300px;
-  left: 30%;
-position: absolute;
+
+
+margin-top: 400px;
+
+}
+
+.container{
+  width: 75%;
+}
+.center-el{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  border-radius: 4px;
+  background-color: #ce8508;
+  color: white;
+  box-shadow: 5px 5px 25px #000;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 1s;
+}
+.box .box__blurb {
+  opacity: 1;
+  transform: translateX(45px);
+  transition: opacity 0.5s 2s, transform 0.5s 0.5s;
+}
+.box .rect__blurb {
+  opacity: 0;
+  transform: translateX(500px);
+  transition: opacity 0.5s 1s, transform 0.5s 1s;
+}
+.box:hover {
+  width: 400px;
+  background-color: orange;
+  box-shadow: -5px 5px 25px #000;
+}
+.box:hover .box__blurb {
+  opacity: 0;
+  transform: translateX(-500px);
+}
+.box:hover .rect__blurb {
+  opacity: 1;
+  transform: translateX(-100px);
+}
+
+
 }
 #start-button{
   position: relative;
+
+}
+
+.dark-header{
+  background-color: rgba(100, 100,100, 0.3);
+}
+
+.question-box{
+  background-color: rgba(100, 100, 100, 0.5);
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+
+@keyframes changeColor {
+  0% {
+    background-color: rgba(100,100,100,0.1);
+    opacity: 0;
+  }
+  50% {
+    background-color: rgba(255,255,255,0.3);
+    transform: scale(1.4);
+  }
+  100% {
+    background-color: rgba(100,100,100,0.3);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@@keyframes breathe {
+  0%{
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(1.1);
+  }
+  50%{
+    transform: scale(1);
+  }
+  75%{
+    transform: scale(1.3);
+  }
+  100%{
+
+    transform: scale(1);
+  }
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceInFinal {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#nav-logo{
+  color: #ce8508;
+}
+
+  .btn-color {
+    background-color:#ce8508;
+    color: #FFFFFF;
+}
+.btn-color:hover {
+   background-color:#ce7000;
+   color: #FFFFFF;
+   transform: scale(1.3) ;
+   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+.question-img {
+  animation: bounceIn 1.5s;
 }
