@@ -24,15 +24,15 @@
           $http.get(`/users/${vm.name}`)
               .then(function(response) {
                   vm.userData = response.data;
-                  
-                  if (vm.userLogin.password === vm.userData.password) {
 
+                  if (vm.userLogin.password === vm.userData.password) {
+                    console.log(vm.userData);
                     //redirect goes here
                     alert("confirmed user")
                   }else{
 
                     //failure alert goes here
-                    alert("you do not have access rights... yet.")
+                    alert("NICE TRY! You do not have access rights... yet.")
                   }
               });
 

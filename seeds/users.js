@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
             id: 1,
             name: "jesus",
             plevel: "255",
-            userAns: "boulder,3.14,best possible answer,5280",
+            userAns: "not used anymore!",
             password: "god"
 
           }
@@ -19,37 +19,82 @@ exports.seed = function(knex, Promise) {
         knex('users').insert(
           {
             id: 2,
-            name: "Karl Marx",
+            name: "fox",
             plevel: "40",
             userAns: "boulder,java,best possible answer,5280",
-            password: "idealist"
+            password: "slightest"
           }
         ),
         knex('users').insert(
           {
             id: 3,
-            name: "Lenin",
+            name: "scully",
             plevel: "20",
             userAns: "boulder,java,best possible answer,5280",
-            password: "killer"
+            password: "Nor"
           }
         ),
         knex('users').insert(
           {
             id: 4,
-            name: "Trotsky",
+            name: "mulder",
             plevel: "10",
             userAns: "boulder,java,best possible answer,5280",
-            password: "scum"
+            password: "head"
           }
         ),
         knex('users').insert(
           {
             id: 5,
-            name: "Batman",
+            name: "walter",
             plevel: "100",
             userAns: "boulder,3.14,best possible answer,maydaymystery",
-            password: 'hero'
+            password: 'even'
+          }
+        ),
+        knex('users').insert(
+          {
+            id: 6,
+            name: "frohike",
+            plevel: "10",
+            userAns: "boulder,java,best possible answer,5280",
+            password: "accounts"
+          }
+        ),
+        knex('users').insert(
+          {
+            id: 7,
+            name: "langly",
+            plevel: "10",
+            userAns: "boulder,java,best possible answer,5280",
+            password: "terms"
+          }
+        ),
+        knex('users').insert(
+          {
+            id: 8,
+            name: "neelix",
+            plevel: "10",
+            userAns: "boulder,java,best possible answer,5280",
+            password: "answer"
+          }
+        ),
+        knex('users').insert(
+          {
+            id: 9,
+            name: "crusher",
+            plevel: "10",
+            userAns: "boulder,java,best possible answer,5280",
+            password: "Time"
+          }
+        ),
+        knex('users').insert(
+          {
+            id: 10,
+            name: "worf",
+            plevel: "10",
+            userAns: "boulder,java,best possible answer,5280",
+            password: "Hatter"
           }
         )
       ]);
