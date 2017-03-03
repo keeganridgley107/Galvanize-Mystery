@@ -18,7 +18,7 @@
           vm.adminFlag = false;
         }
         vm.userLoginVerify = function(){
-          console.log(vm.userLogin);
+          //console.log(vm.userLogin);
           vm.name = vm.userLogin.name;
 
           $http.get(`/users/${vm.name}`)
@@ -26,7 +26,7 @@
                   vm.userData = response.data;
 
                   if (vm.userLogin.password === vm.userData.password) {
-                    console.log(vm.userData);
+                    //console.log(vm.userData);
                     //redirect goes here
                     alert("confirmed user")
                   }else{
