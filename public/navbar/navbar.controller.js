@@ -28,7 +28,8 @@
                   if (vm.userLogin.password === vm.userData.password) {
                     //console.log(vm.userData);
                     //redirect goes here
-                    alert("confirmed user")
+                    //alert("confirmed user")
+                    window.location.assign("http://one-question.surge.sh/")
                   }else{
 
                     //failure alert goes here
