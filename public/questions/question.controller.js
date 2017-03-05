@@ -25,12 +25,18 @@
             //vm.smsFormToggleFlag = false;
             vm.beginToggle = false;
 
-            //console.log(localStorage.getItem('userAns'));
-            if (localStorage.getItem('userAns') === null){
-              console.log("user has not finshed mayday");
+
+
+
+
+            if (localStorage.getItem('isWin') === null){
+              console.log("user has not finshed sec1");
             }else{
-              console.log("user has completed mayday");
+              console.log("user has completed sec1!");
               //window.location = "this is my secret site.com"
+              vm.questionToggleFlag = false;
+              vm.beginToggle =true;
+              
             }
             // check for localStorage if yes
             // user has already completed the mystery
@@ -105,16 +111,16 @@
               vm.finalAnswer = '';
               vm.finalQuestionToggleFlag = false;
 
-              localStorage.setItem("userAns", vm.userANS);
+              localStorage.setItem("isWin", "sec1");
 
 
 
               vm.section2InfoFlag = true;
 
-              //todo: this is where the redirect to a better animated location page will be
+              //todo: change to animated modal dropdown
 
             }
-            console.log(isWin, localStorage.getItem("userAns"));
+            console.log(isWin, localStorage.getItem("isWin"));
         };
 
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function

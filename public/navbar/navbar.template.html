@@ -1,45 +1,90 @@
 <div class="col-sm-12 fullwidth">
-  <nav class="navbar navbar-inverse">
-  <!-- <div class="container-fluid "> -->
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header ">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <nav class="navbar navbar-inverse">
+        <!-- <div class="container-fluid "> -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="nav-logo" href="../index.html">G | M</a>
-    </div>
+            <a class="navbar-brand" id="nav-logo" href="../index.html">G | M</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-      <ul class="nav navbar-nav navbar-right">
-        <!-- nav menu level links can go here -->
-        <li><a ng-if="$ctrl.adminFlag" href="#">HIDDEN_Admin</a></li>
-        <li><a href="http://keegan.capstone.surge.sh/index.html">About</a></li>
-        <!-- <li><a href="../landing.html">Landing</a></li> -->
-        <li role="separator" class="divider"></li>
-        <li><a href="#" ng-click="$ctrl.loginFlagToggle()" >login</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- nav menu level links can go here -->
+                <li><a ng-if="$ctrl.adminFlag" href="#">HIDDEN_Admin</a></li>
+                <li><a href="http://keegan.capstone.surge.sh/index.html">About</a></li>
+                <!-- <li><a href="../landing.html">Landing</a></li> -->
+                <li role="separator" class="divider"></li>
+                <!-- <li><a href="#" ng-click="$ctrl.loginFlagToggle()" >login</a></li> -->
 
-      </ul>
-    </div>
-      <!-- /.navbar-collapse -->
-  <!-- </div> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- </div> -->
 
-  <!-- /.container-fluid -->
-</nav>
+        <!-- /.container-fluid -->
+    </nav>
 </div>
+
 <div class="login-box center-block text-center" ng-if="$ctrl.loginFlag">
-  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
 
-      <input type="text" name="login_user" placeholder="User" ng-model="$ctrl.userLogin.name" value="">
+        <section class="container content">
+            <div class="login-box bgcolor-4 center-block text-center">
+                <div class="col-xs-12">
+                  <h1 id="login-title">Section 3 Login</h1>
+                </div>
+                <div class="col-xs-12">
 
-      <input type="text" name="login_pass" placeholder="Password" ng-model="$ctrl.userLogin.password" value="">
+                  <span class="input input--kuro" id="name-span">
+                    <input class="input__field input__field--kuro" type="text" id="input-7" ng-model="$ctrl.userLogin.name" />
+                    <label class="input__label input__label--kuro" for="input-7">
+                      <span class="input__label-content input__label-content--kuro">USERNAME</span>
+                    </label>
+                  </span>
+                </div>
+                    <!-- <input type="text" name="login_user" id="login-user" placeholder="User" ng-model="$ctrl.userLogin.name" value=""> -->
 
-      <button type="button" name="button" ng-click="$ctrl.userLoginVerify()">LOGIN</button>
+                <div class="col-xs-12">
+                    <span class="input input--kuro" id="pass-span">
+                    <input class="input__field input__field--kuro" type="text" ng-model="$ctrl.userLogin.password" id="input-8" />
+                    <label class="input__label input__label--kuro" for="input-8">
+                      <span class="input__label-content input__label-content--kuro">PASSWORD</span>
+                    </label>
+                    </span>
 
-  </div>
-  </div>
+                  </div>
+                    <!-- <input type="text" name="login_pass" id="login-pass" placeholder="Password" ng-model="$ctrl.userLogin.password" value=""> -->
+                <div class=" col-xs-12">
+
+                </div>
+
+                <span class="input input--kuro" id="login-span">
+                  <input class="input__field input__field--kuro" type="button" id="input-9" ng-click="$ctrl.userLoginVerify()" />
+                  <label class="input__label input__label--kuro" for="input-9">
+                    <span class="input__label-content input__label-content--kuro">LOGIN</span>
+                  </label>
+                </span>
+
+                <!-- <button type="button" id="login-button" name="button" ng-click="$ctrl.userLoginVerify()">LOGIN</button> -->
+
+
+            </div>
+
+            <section class="content ">
+
+            </section>
+
+        </section>
+
+
+
+    </div>
+</div>
