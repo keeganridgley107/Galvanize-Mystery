@@ -14,11 +14,11 @@
     ) !important;
   }
 </style>
-<div class="container text-center center-block">
+<div ng-hide="$ctrl.beginToggle" class="container text-center center-block">
   <div class="jumbotron">
     <h1 id="main-title">Welcome to Galvanize Mystery</h1>
 
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Play</a></p>
+    <p><a class="btn btn-primary btn-lg" ng-click="$ctrl.beginToggle=true" href="" role="button">Play</a></p>
   </div>
 
 </div>
@@ -72,8 +72,7 @@
 </div>
   <div  ng-hide="$ctrl.beginToggle" class="text-center center-block">
 
-<button type="button" id="start-button" class="btn btn-color " ng-click="$ctrl.beginToggle=true" name="button"> <h1><span class="glyphicon glyphicon-triangle-bottom"></span></h1>
-  </button>
+
 
     <!-- <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
       <span class="box__blurb ">CLICK</span>
@@ -191,29 +190,7 @@
 
 
 
-<!-- ENDING: this is where the final clue (location of GPS_POSTER, poster conatins multiple user login/pass  that are hardcoded into the CAPSTONE_PAGE) will show up (after user login with correct SECRET_TOKEN) -->
-
-
-
-<!-- tech needed:
- HOSTED SITE
- RPI SERVER (running forever)
- QR code generator
- SMS api
- custom form validation
- GPS / location service
- CHAT room / service
--->
-
-
-<!-- question data:
-gps location
-code challenge based on cipher
-binary convert to decimal
-book / word list (stack-overflow) problem
-console.log hidden msg on surge site  -->
-
-
+<!-- this is where the clue to the next section goes -->
 
 
 <div ng-if="$ctrl.section2InfoFlag" class="container">
