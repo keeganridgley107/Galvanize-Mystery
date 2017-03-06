@@ -14,17 +14,71 @@
     ) !important;
   }
 </style>
+<div class="container text-center center-block">
+  <div class="jumbotron">
+    <h1 id="main-title">Welcome to Galvanize Mystery</h1>
+
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Play</a></p>
+  </div>
+
+</div>
 
 <div class="col-md-12 col-sm-12 col-xs-12 center-el">
-<div class="container about-box text-center center-block" ng-hide="$ctrl.beginToggle">
-  <h1>Welcome to Galvanize Mystery</h1>
 
-  <h3>An interactive three part puzzle game that challnges users solve questions based on aspects of web development while searching out a secret server conatining clues to a hidden reward! </h3>
-  <div id="start-button" ng-hide="$ctrl.beginToggle" class="text-center center-block">
-    <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
+<div class="container about-box text-center center-block" ng-hide="$ctrl.beginToggle">
+
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <h3>Section 1</h3>
+        <img src="media/front.png" alt="...">
+        <div class="caption">
+          <p>Frontend</p>
+          <p>questions that test knowledge of html and css are the first subject</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <h3>Section 2</h3>
+        <img src="media/mids.png" alt="...">
+        <div class="caption">
+          <p>Middleware</p>
+          <p>Data delivery is covered here, expect challenges that make you move</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <h3>Section 3</h3>
+        <img src="media/back.png" alt="...">
+        <div class="caption">
+          <p>Backend</p>
+          <p>Data types, persistance and conversion are the topics in this section</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <h3>An interactive three part puzzle solved using computer science and web development knowledge!</h3>
+
+</div>
+  <div  ng-hide="$ctrl.beginToggle" class="text-center center-block">
+
+<button type="button" id="start-button" class="btn btn-color " ng-click="$ctrl.beginToggle=true" name="button"> <h1><span class="glyphicon glyphicon-triangle-bottom"></span></h1>
+  </button>
+
+    <!-- <div class="box" id="start-game-button" ng-click="$ctrl.beginToggle = true">
       <span class="box__blurb ">CLICK</span>
       <span class="rect__blurb">TO PLAY THE GAME</span>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -173,7 +227,5 @@ console.log hidden msg on surge site  -->
 
 
     </div>
-
-</div>
 
 </div>
