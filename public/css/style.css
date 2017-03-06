@@ -20,8 +20,16 @@ body{
 }
 
 .final-question-container{
-animation: bounceInFinal 2s;
+  margin-top: 5em;
+  padding-bottom: 2em;
+animation: bounceInFinal 1s;
+background-color: #c8c8c8;
+border-radius: 4px;
+border: 1px solid rgba(100, 100, 100, 0.5);
 }
+
+
+
 .center-el{
   display: flex;
   justify-content: center;
@@ -73,24 +81,25 @@ animation: bounceInFinal 2s;
   border: 1px solid rgba(100, 100, 100, 0.3);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border-radius: 8px;
-  font-family: 'Montserrat';
+  font-family: 'Arapey';
 
   /*animation: aboutIn .7s;*/
 }
 
 .about-box h3{
-  font-family: 'Expletus Sans', cursive;
+  font-family: 'Arapey', cursive;
 }
 .about-box h2{
-  font-family: 'Overlock SC', cursive;
+  font-family: 'Arapey', cursive;
 }
 
 .final-location-box{
-  background-color: #aaa;
+  background-color: #eeeeee;
   border: 1px solid rgba(100, 100, 100, 0.3);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin-top: 16em;
   animation: bounceInFinal .4s;
+  font-family: 'Arapey'
 }
 
 }
@@ -105,15 +114,27 @@ animation: bounceInFinal 2s;
 }
 
 .question-box{
-  margin-top: 3em;
-  margin-right: .5em;
-  background-color: #aaa;
+  margin-top: 5em;
+
+  background-color: rgba(200,200,200,1);
   border: 1px solid rgba(100, 100, 100, 0.3);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   animation: bounceIn 1s;
-  font-family: 'Montserrat';
+  font-family: 'Arapey';
+  border-radius: 5px;
+  padding-bottom: 3em;
 }
 
+.btn-group{
+  margin: 10px;
+  margin-top: 25px;
+
+}
+.btn__spacer{
+  margin-left: 20px !important;
+  margin-right: 20px;
+  border-radius: 4px !important;
+}
 
 
 
@@ -158,7 +179,7 @@ animation: bounceInFinal 2s;
     transform: scale(1);
   }
   75%{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100%{
 
@@ -183,16 +204,16 @@ animation: bounceInFinal 2s;
 
 @keyframes bounceInFinal {
   0% {
-    transform: scale(1);
+    transform: scale(.6);
     opacity: 0;
   }
-  60% {
+  50% {
     transform: scale(1.1);
-    opacity: .3;
+    opacity: 1
   }
   100% {
     transform: scale(1);
-    opacity: 1;
+
   }
 }
 
@@ -204,10 +225,13 @@ animation: bounceInFinal 2s;
   .btn-color {
     background-color:#ce8508;
     color: #FFFFFF;
+    box-shadow: 1px 1px 1px grey;
 }
 .btn-color:hover {
    background-color:#ce7000;
    color: #FFFFFF;
+   box-shadow: 1px 1px 1px black;
+   background-image: linear-gradient(to bottom,#ce7000 0,#ce8000 100%);
    transform: scale(1.3) ;
    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -215,6 +239,12 @@ animation: bounceInFinal 2s;
 .login-box{
   background-color: rgba(100, 100, 100, 0.5);
   height: 500px;
+  /*margin-top: 5em;*/
+
+}
+#login-area{
+  margin-top: 5em;
+
 }
 
 
@@ -243,7 +273,7 @@ animation: bounceInFinal 2s;
   background: #f0f0f0;
   color: #aaa;
   font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Arapey'
   -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -393,7 +423,7 @@ animation: bounceInFinal 2s;
 }
 #login-title{
   margin-top: 20px;
-  font-family: 'Montserrat';
+  font-family: 'Arapey';
   font-size: 47px
 }
 #main-title{
@@ -421,4 +451,74 @@ animation: bounceInFinal 2s;
 }
 .jumbotron{
   margin-bottom: 0;
+  background-image: url(../img/jumbo2.jpg);
+  background-size: cover;
+}
+
+#main-span{
+  width:100%;
+  background-color: rgba(0,0,0, 0.8);
+  padding: 5px;
+  padding-bottom: 7px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px black;
+
+}
+#page-title{
+opacity: 1;
+color: #ce7000;
+font-family: 'Arapey';
+font-size: 70px;
+}
+
+#play__button{
+  background-color: #ce7000;
+  background-image: linear-gradient(to bottom,#ce6000 0,#ce7000 100%);
+  font-family: 'Arapey';
+  font-size: 26px;
+  margin-top: 45px;
+  box-shadow: 0px 0px 10px #000;
+}
+
+#submit-question-btn{
+  background-color: #ce7000;
+  background-image: linear-gradient(to bottom,#ce6000 0,#ce7000 100%);
+  font-family: 'Arapey';
+  font-size: 34px;
+  margin-top: 10px;
+
+  color: #fff;
+  height: 60px;
+  width: 200px;
+}
+
+#submit-final-btn{
+  background-color: #ce7000;
+  background-image: linear-gradient(to bottom,#ce6000 0,#ce7000 100%);
+  font-family: 'Arapey';
+  font-size: 26px;
+  margin-top: 10px;
+  color: #fff;
+  height: 60px;
+  width: 200px;
+}
+
+#location-text1{
+  font-size: 50px;
+  animation: breathe 20s infinite;
+margin-bottom: 10px !important;
+}
+#location-text1:hover{
+
+}
+#location-text2{
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+#final-location-btm{
+  margin-bottom: 33.5px;
+}
+#text-spacer{
+  margin-bottom: 50px;
 }

@@ -8,17 +8,22 @@
       to right,
       #595950,
       #595959 15%,
-      #FFFFFf 15%,
-      #FFFFFf 85%,
+      #595959 15%,
+      #595959 85%,
       #595959 85%
     ) !important;
   }
 </style>
 <div ng-hide="$ctrl.beginToggle" class="container text-center center-block">
   <div class="jumbotron">
-    <h1 id="main-title">Welcome to Galvanize Mystery</h1>
+    <div >
+<div id="main-span">
+      <h1 id="page-title" >Welcome to Galvanize Mystery</h1></div>
+    </div>
 
-    <p><a class="btn btn-primary btn-lg" ng-click="$ctrl.beginToggle=true" href="" role="button">Play</a></p>
+
+
+    <p><a class="btn btn-primary btn-lg" id="play__button" ng-click="$ctrl.beginToggle=true" href="" role="button">Play</a></p>
   </div>
 
 </div>
@@ -106,21 +111,21 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
 
                       <div class="btn-group" data-toggle="radios">
-                        <label class="btn  btn-color">
-                          <input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer" > ANSWER A
+                        <label class="btn  btn-color btn__spacer">
+                          <input type="radio" name="question_input" id="questionRadios1" value="option1" ng-model="$ctrl.questionAnswer" > Answer A
                         </label>
-                        <label class="btn  btn-color">
-                          <input type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer" > ANSWER B
+                        <label class="btn  btn-color btn__spacer">
+                          <input type="radio" name="question_input" id="questionRadios2" value="option2" ng-model="$ctrl.questionAnswer" > Answer B
                         </label>
-                        <label class="btn btn-color">
-                          <input type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer" > ANSWER C
+                        <label class="btn btn-color btn__spacer">
+                          <input type="radio" name="question_input" id="questionRadios3" value="option3" ng-model="$ctrl.questionAnswer" > Answer C
                         </label>
 
                       </div>
 
                     </div>
 
-                    <button type="button" name="button" class="btn-color btn-submit" ng-click="$ctrl.questionSubmit(question)">SUBMIT ANSWER</button>
+                    <button type="button" name="button" class=" btn-submit" id="submit-question-btn" ng-click="$ctrl.questionSubmit(question)">Submit</button>
 
                     </div>
                   </div>
@@ -140,10 +145,10 @@
 
 <!-- this is where the finalQuestionInput will be, if all questions pass then the input bar will show up  -->
 
-<div ng-if="$ctrl.finalQuestionToggleFlag" class="final-question-container col-md-12 col-sm-12 col-xs-12">
+<div ng-if="$ctrl.finalQuestionToggleFlag" class=" col-md-12 col-sm-12 col-xs-12">
     <div class="container">
 
-        <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center">
+        <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center final-question-container">
             <h3 class="">{{$ctrl.finalQuestion[0].title}}</h3>
             <h1>{{$ctrl.finalQuestion[0].text}}</h1>
             <div class="final-image-wrapper">
@@ -154,20 +159,20 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <div class="btn-group" data-toggle="radios">
-                    <label class="btn btn-color">
-<input type="radio" name="question_input" id="final-question-radios1" value="option1" ng-model="$ctrl.finalAnswer" > ANSWER A
+                    <label class="btn btn-color btn__spacer">
+<input type="radio" name="question_input" id="final-question-radios1" value="option1" ng-model="$ctrl.finalAnswer" > Anwser A
 </label>
-                    <label class="btn btn-color">
-<input type="radio" name="question_input" id="final-question-radios2" value="option2" ng-model="$ctrl.finalAnswer" > ANSWER B
+                    <label class="btn btn-color btn__spacer">
+<input type="radio" name="question_input" id="final-question-radios2" value="option2" ng-model="$ctrl.finalAnswer" > Anwser B
 </label>
-                    <label class="btn btn-color">
-<input type="radio" name="question_input" id="final-question-radios3" value="option3" ng-model="$ctrl.finalAnswer" > ANSWER C
+                    <label class="btn btn-color btn__spacer">
+<input type="radio" name="question_input" id="final-question-radios3" value="option3" ng-model="$ctrl.finalAnswer" > Anwser C
 </label>
 
                 </div>
 
             </div>
-            <button type="button" name="button" class="btn-color" ng-click="$ctrl.finalSubmit()">SUBMIT ANSWER</button>
+            <button type="button" name="button" class="btn-submit " id="submit-final-btn" ng-click="$ctrl.finalSubmit()">Submit</button>
         </div>
     </div>
 
@@ -199,8 +204,9 @@
 
         <h1 id="location-text1">F0110w th3 #ffffff oryctolagus cuniculus</h1>
         <p id="location-text2">0x28DOTzero0x28647COMMAnegitive0x69DOT0x199E836595FE</p>
+        <h1 class="text-spacer">---------</h1>
         <h3>Users that do not reside in Boulder, Co. </h3>
-        <p>Please click <a href="http://section-2-keegan-capstone.surge.sh/">HERE</a> to continue!</p>
+        <p id="final-location-btm">Please click <a href="http://section-2-keegan-capstone.surge.sh/">HERE</a> to continue!</p>
 
 
     </div>
