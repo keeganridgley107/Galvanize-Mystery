@@ -522,3 +522,8 @@ margin-bottom: 10px !important;
 #text-spacer{
   margin-bottom: 50px;
 }
+
+#call-button{
+  width: 50%;
+  height: 50px;
+}

@@ -127,7 +127,7 @@
 
         vm.call = function(){
           $http.get('/call')
-          .then(alert("calling..."))
+          .then(console.log("dialing..."))
         };
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
