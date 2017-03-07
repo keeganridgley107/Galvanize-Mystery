@@ -36,7 +36,7 @@
               //window.location = "this is my secret site.com"
               vm.questionToggleFlag = false;
               vm.beginToggle =true;
-              
+
             }
             // check for localStorage if yes
             // user has already completed the mystery
@@ -112,10 +112,11 @@
               vm.finalQuestionToggleFlag = false;
 
               localStorage.setItem("isWin", "sec1");
+              vm.section2InfoFlag =true;
 
 
+              // api functionality goes here
 
-              vm.section2InfoFlag = true;
 
               //todo: change to animated modal dropdown
 
@@ -123,6 +124,11 @@
             console.log(isWin, localStorage.getItem("isWin"));
         };
 
+
+        vm.call = function(){
+          $http.get('/call')
+          .then(alert("calling..."))
+        };
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
         // vm.handshakeFunction = function(){

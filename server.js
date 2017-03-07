@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const questions = require('./routes/questions');
 const finalQuestion =require('./routes/final_question');
 const users = require('./routes/users');
+const call = require('./routes/call')
 const path = require('path');
 //const request = require('request');
 
@@ -16,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/questions', questions);
 app.use('/final_question', finalQuestion);
 app.use('/users', users);
+app.use('/call', call);
 
 
 

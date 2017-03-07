@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
+
 //require resources / tools above
 
 
@@ -16,6 +17,7 @@ router.get('/', function(req, res) {
     res.send(err);
   });
 });
+
 
 //routes for psql connection to the webpage
 
