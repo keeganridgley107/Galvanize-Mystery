@@ -25,7 +25,7 @@
 
         }
         vm.userLoginVerify = function(){
-          //console.log(vm.userLogin);
+
           vm.name = vm.userLogin.name;
 
           $http.get(`/users/${vm.name}`)
@@ -33,15 +33,19 @@
                   vm.userData = response.data;
 
                   if (vm.userLogin.password === vm.userData.password) {
-                    // console.log(vm.userData);
+
                     //redirect goes here
-                    //alert("confirmed user")
+
                     window.location.assign("http://one-question.surge.sh/")
                     localStorage.setItem("loginUsr",vm.name);
                   }else{
 
-                    //failure alert goes here
-                    alert("NICE TRY! You do not have access rights... yet.")
+                    //failure modal goes here
+                    $('#myModal4').modal({
+                      keyboard: true
+                    })
+                    vm.userLogin.name = "";
+                    vm.userLogin.password = "";
                   }
               });
 
@@ -51,7 +55,7 @@
 
 
           if (vm.userLogin !== undefined && vm.userLogin.name.length > 2) {
-                console.log(vm.userLogin);
+
           }
 
 

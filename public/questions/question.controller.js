@@ -30,10 +30,9 @@
 
 
             if (localStorage.getItem('isWin') === null){
-              console.log("user has not finshed sec1");
+
             }else{
-              console.log("user has completed sec1!");
-              //window.location = "this is my secret site.com"
+
               vm.questionToggleFlag = false;
               vm.beginToggle =true;
 
@@ -45,18 +44,18 @@
             $http.get('/questions')
                 .then(function(response) {
                     vm.allQuestions = response.data;
-                    //console.log(vm.allQuestions);
+
                     vm.totalQuest = response.data.length;
-                    //console.log(vm.totalQuest);
+
                 });
 
             $http.get('/final_question')
                 .then(function(response) {
                     vm.finalQuestion = response.data;
-                    //console.log(vm.finalQuestion);
+
 
                 });
-                //console.log(vm.qID);
+
         }; //end of oninit function
 
 
@@ -67,7 +66,7 @@
 
         vm.questionSubmit =function(question){
           //debug submit log here
-          console.log(vm.questionAnswer);
+
 
           let tempANS = vm.questionAnswer;
           vm.qID = question.id;
@@ -97,8 +96,7 @@
             //insert failure animation here!!
 
           }
-          //console.log(isWin);
-          //console.log(vm.userANS);
+          
 
         };
         //this function is used to submit all the main questions and compare user answer to determine if they are correct or not then it empties the form and responds to the user
@@ -141,10 +139,6 @@
         };
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 
-        // vm.handshakeFunction = function(){
-        //   console.log(vm.handshake.phone);
-        //
-        // };
         //todo: PIVOT this using a working sms/email API
 
         //this function will fire a SMS to the number provided with a set msg payload if it is actually a series of numbers (check for chars other than 0-9 and handle kebab-case)
