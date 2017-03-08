@@ -88,7 +88,10 @@
             }
           }else{
             //failure msg goes here (modal or whatev)
-            alert("this is not a correct answer, plese try again");
+            // alert("this is not a correct answer, plese try again");
+            $('#myModal').modal({
+              keyboard: true
+            })
             vm.questionAnswer = '';
 
             //insert failure animation here!!
@@ -120,14 +123,21 @@
 
               //todo: change to animated modal dropdown
 
+            }else{
+              $('#myModal2').modal({
+                keyboard: true
+              })
             }
-            console.log(isWin, localStorage.getItem("isWin"));
+
         };
 
 
         vm.call = function(){
           $http.get('/call')
-          .then(console.log("dialing..."))
+          .then($('#myModal3').modal({
+            keyboard: true
+          })
+          )
         };
         //this function is used to submit the final user answer and determine if they have the right one(s) out of the three possible if  it is the function calls the handshakeToggle function
 

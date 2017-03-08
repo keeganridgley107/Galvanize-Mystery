@@ -97,6 +97,15 @@
     <div ng-if="$ctrl.questionToggleFlag" class="">
         <div class="">
             <div ng-repeat="question in $ctrl.allQuestions" class="">
+              <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content text-center">
+
+                    <h1>This is not the correct answer.</h1><br/>
+                    <h3>Please try again!</h3>
+                  </div>
+                </div>
+              </div>
                 <div ng-if="$ctrl.counter === question.id" class="col-md-12 col-sm-12 col-xs-12 center-block text-center ">
                   <div class="container ">
                       <div class="question-box">
@@ -148,7 +157,15 @@
 
 <div ng-if="$ctrl.finalQuestionToggleFlag" class=" col-md-12 col-sm-12 col-xs-12">
     <div class="container">
+      <div id="myModal2" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content text-center">
 
+            <h1>This is not the correct answer.</h1><br/>
+            <h3>Please try again!</h3>
+          </div>
+        </div>
+      </div>
         <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center final-question-container">
             <h3 class="">{{$ctrl.finalQuestion[0].title}}</h3>
             <h1>{{$ctrl.finalQuestion[0].text}}</h1>
@@ -200,11 +217,20 @@
 
 
 <div ng-if="$ctrl.section2InfoFlag" class="container">
+  <div id="myModal3" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content text-center">
+
+        <h1>Calling...</h1><br/>
+        <h3>Please wait!</h3>
+      </div>
+    </div>
+  </div>
     <div class="col-md-12 col-sm-12 center-block text-center final-location-box">
 
 
         <h1 id="location-text1">F0110w th3 #ffffff oryctolagus cuniculus</h1>
-        <p id="location-text2">Proceed to The Galvanize Mysetery Phone then click the call button below</p>
+        <p id="location-text2">Proceed to The Galvanize Mysetery Event Phone then click the call button below</p>
         <button type="button" class="btn-color" id="call-button" name="button" ng-click="$ctrl.call()">CALL</button>
         <h1 class="text-spacer">---------</h1>
         <h3>Users that do not reside in Boulder, Co. </h3>
